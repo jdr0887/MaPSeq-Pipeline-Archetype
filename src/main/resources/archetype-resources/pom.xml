@@ -39,6 +39,21 @@
     <connection>scm:git:ssh://developername@code.renci.org/gitroot/${mapseqGitRepo}</connection>
     <tag>HEAD</tag>
   </scm>
+  <repositories>
+    <repository>
+      <id>renci.repository</id>
+      <name>renci.repository</name>
+      <url>http://ci-dev.renci.org/nexus/content/repositories/public</url>
+      <releases>
+    	<enabled>true</enabled>
+    	<updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+    	<enabled>true</enabled>
+    	<updatePolicy>never</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
   <dependencyManagement>
     <dependencies>
       <dependency>
