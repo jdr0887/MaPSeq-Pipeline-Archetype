@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>edu.unc</groupId>
+    <artifactId>mapseq</artifactId>
+    <version>0.2.3</version>
+  </parent>
+  <name>MaPSeq :: Pipelines :: ${mapseqTitle}</name>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+  <issueManagement>
+    <system>gForge</system>
+    <url>https://code.renci.org/gf/project/mps_hw_pl/tracker/</url>
+  </issueManagement>
+  <ciManagement>
+    <system>hudson</system>
+    <url>https://ci-dev.renci.org/hudson/mapseq-pipeline-${mapseqGroupName}</url>
+    <notifiers>
+      <notifier>
+	<type>mail</type>
+	<configuration>
+	  <address>jdr0887@renci.org</address>
+	</configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
+  <licenses>    
+    <license>
+      <name>RENCI Open Source Software License</name>
+      <url>LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/${mapseqGitRepo}</developerConnection>
+    <connection>scm:git:ssh://developername@code.renci.org/gitroot/${mapseqGitRepo}</connection>
+    <tag>HEAD</tag>
+  </scm>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+      	<groupId>edu.unc.mapseq</groupId>
+      	<artifactId>modules</artifactId>
+      	<version>0.0.3</version>
+      </dependency>
+      <dependency>
+      	<groupId>${groupId}.${mapseqGroupName}</groupId>
+      	<artifactId>${rootArtifactId}-workflow</artifactId>
+      	<version>${version}</version>
+      </dependency>
+      <dependency>
+	<groupId>org.apache.activemq</groupId>
+	<artifactId>activemq-client</artifactId>
+	<version>${activemq.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

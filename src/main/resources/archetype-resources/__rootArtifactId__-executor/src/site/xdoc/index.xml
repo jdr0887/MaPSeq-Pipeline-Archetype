@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<document>
+  <body>
+    <section name="About">
+      <subsection name="Graph">
+        <p>
+          <img src="images/pipeline.dag.png" />
+        </p>
+      </subsection>
+    </section>
+  </body>
+</document>

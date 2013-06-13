@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0" default-activation="eager">
+
+  <cm:property-placeholder persistent-id="edu.unc.mapseq.executor.${mapseqDotPackageName}" update-strategy="reload">
+    <cm:default-properties>
+      <cm:property name="period" value="5" />
+    </cm:default-properties>
+  </cm:property-placeholder>
+
+  <reference id="${mapseqPipelineName}PipelineBeanService" interface="edu.unc.mapseq.pipeline.PipelineBeanService"
+    component-name="${mapseqPipelineName}PipelineBeanService" />
+
+  <bean id="task" class="edu.unc.mapseq.executor.${mapseqDotPackageName}.${mapseqPipelineName}PipelineExecutorTask">
+    <property name="pipelineBeanService" ref="${mapseqPipelineName}PipelineBeanService" />
+  </bean>
+
+  <bean id="${mapseqPipelineName}PipelineExecutorService" class="edu.unc.mapseq.executor.${mapseqDotPackageName}.${mapseqPipelineName}PipelineExecutorService"
+    init-method="start" destroy-method="stop" activation="eager">
+    <property name="task" ref="task" />
+    <property name="period" value="${symbol_dollar}{period}" />
+    <cm:managed-properties persistent-id="edu.unc.mapseq.executor.${mapseqDotPackageName}" update-strategy="container-managed" />
+  </bean>
+
+</blueprint>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>edu.unc.mapseq.pipelines</groupId>
+  <artifactId>pipeline-archetype</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>MaPSeq :: Pipelines :: Archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <developers>
+    <developer>
+      <id>jdr0887</id>
+      <name>Jason Reilly</name>
+      <email>jdr0887@renci.org</email>
+      <url>http://www.renci.org/~jdr0887</url>
+      <organization>RENCI</organization>
+      <organizationUrl>http://www.renci.org/</organizationUrl>
+      <roles>
+        <role>Senior Research Software Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>roachjm</id>
+      <name>Jeff Roach</name>
+      <email>roachjm@unc.edu</email>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>RENCI Open Source Software License</name>
+      <url>LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:ssh://developername@code.renci.org/gitroot/mps_p_archetype</connection>
+    <developerConnection>scm:git:ssh://jdr0887@code.renci.org/gitroot/mps_p_archetype</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>renci.repository</id>
+      <name>renci.repository</name>
+      <url>https://ci-dev.renci.org/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>renci.repository</id>
+      <name>renci.repository</name>
+      <url>https://ci-dev.renci.org/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <site>
+      <id>renci.site</id>
+      <name>renci.site</name>
+      <url>file:///${user.dir}/target/site-deploy</url>
+    </site>
+  </distributionManagement>
+</project>
