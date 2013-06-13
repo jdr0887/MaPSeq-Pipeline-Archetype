@@ -57,7 +57,7 @@
 
   <scm>
     <connection>scm:git:ssh://developername@code.renci.org/gitroot/mps_p_archetype</connection>
-    <developerConnection>scm:git:ssh://jdr0887@code.renci.org/gitroot/mps_p_archetype</developerConnection>
+    <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/mps_p_archetype</developerConnection>
   </scm>
 
   <distributionManagement>
