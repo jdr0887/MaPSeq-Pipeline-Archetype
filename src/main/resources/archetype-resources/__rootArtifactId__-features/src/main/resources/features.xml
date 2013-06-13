@@ -4,10 +4,10 @@
 <features name="mapseq-pipeline-${parentArtifactId}-${symbol_dollar}{project.version}">
 
   <feature name="mapseq-pipeline-${parentArtifactId}" version="${symbol_dollar}{project.version}" resolver="(obr)">
-    <bundle>mvn:${package}.${parentArtifactId}/${parentArtifactId}-workflow/${symbol_dollar}{project.version}</bundle>
-    <bundle>mvn:${package}.${parentArtifactId}/${parentArtifactId}-commands/${symbol_dollar}{project.version}</bundle>
-    <bundle start-level="100">mvn:${package}.${parentArtifactId}/${parentArtifactId}-executor/${symbol_dollar}{project.version}</bundle>
-    <bundle start-level="100">mvn:${package}.${parentArtifactId}/${parentArtifactId}-messaging/${symbol_dollar}{project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.${parentArtifactId}/${parentArtifactId}-workflow/${symbol_dollar}{project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.${parentArtifactId}/${parentArtifactId}-commands/${symbol_dollar}{project.version}</bundle>
+    <bundle start-level="100">mvn:edu.unc.mapseq.pipelines.${parentArtifactId}/${parentArtifactId}-executor/${symbol_dollar}{project.version}</bundle>
+    <bundle start-level="100">mvn:edu.unc.mapseq.pipelines.${parentArtifactId}/${parentArtifactId}-messaging/${symbol_dollar}{project.version}</bundle>
   </feature>
 
 </features>
