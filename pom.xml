@@ -10,7 +10,7 @@
 
   <groupId>edu.unc.mapseq.pipelines</groupId>
   <artifactId>pipeline-archetype</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>MaPSeq :: Pipelines :: Archetype</name>
@@ -40,7 +40,7 @@
   <scm>
     <connection>scm:git:ssh://developername@code.renci.org/gitroot/mps_p_archetype</connection>
     <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/mps_p_archetype</developerConnection>
-    <tag>pipeline-archetype-0.0.3</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
