@@ -24,7 +24,7 @@ public class MessagingTest {
         try {
             connection = connectionFactory.createConnection();
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            Destination destination = session.createQueue("queue/${parentArtifactId}");
+            Destination destination = session.createQueue("queue/${mapseqDotPackageName}");
             MessageProducer producer = session.createProducer(destination);
             producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
