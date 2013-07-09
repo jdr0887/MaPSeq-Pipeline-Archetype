@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>edu.unc</groupId>
+    <groupId>edu.unc.mapseq</groupId>
     <artifactId>mapseq</artifactId>
-    <version>0.2.4</version>
+    <version>0.0.1</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
@@ -14,20 +14,6 @@
   <packaging>maven-archetype</packaging>
 
   <name>MaPSeq :: Pipelines :: Archetype</name>
-
-  <developers>
-    <developer>
-      <id>jdr0887</id>
-      <name>Jason Reilly</name>
-      <email>jdr0887@renci.org</email>
-      <url>http://www.renci.org/~jdr0887</url>
-      <organization>RENCI</organization>
-      <organizationUrl>http://www.renci.org/</organizationUrl>
-      <roles>
-        <role>Senior Research Software Developer</role>
-      </roles>
-    </developer>
-  </developers>
 
   <licenses>
     <license>
@@ -42,24 +28,6 @@
     <developerConnection>scm:git:ssh://${user.name}@code.renci.org/gitroot/mps_p_archetype</developerConnection>
     <tag>HEAD</tag>
   </scm>
-
-  <distributionManagement>
-    <repository>
-      <id>renci.repository</id>
-      <name>renci.repository</name>
-      <url>https://ci-dev.renci.org/nexus/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>renci.repository</id>
-      <name>renci.repository</name>
-      <url>https://ci-dev.renci.org/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <site>
-      <id>renci.site</id>
-      <name>renci.site</name>
-      <url>file:///${user.dir}/target/site-deploy</url>
-    </site>
-  </distributionManagement>
 
   <build>
 
