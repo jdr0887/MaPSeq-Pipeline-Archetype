@@ -10,7 +10,7 @@
 
   <groupId>edu.unc.mapseq.pipelines</groupId>
   <artifactId>pipeline-archetype</artifactId>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>0.0.6-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>MaPSeq :: Pipelines :: Archetype</name>
@@ -27,7 +27,6 @@
     <url>https://github.com/jdr0887/MaPSeq-Pipeline-Archetype.git</url>
     <connection>scm:git:git@github.com:jdr0887/MaPSeq-Pipeline-Archetype.git</connection>
     <developerConnection>scm:git:git@github.com:jdr0887/MaPSeq-Pipeline-Archetype.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
 
   <build>
