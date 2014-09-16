@@ -7,13 +7,13 @@
 
   <reference id="connectionFactory" interface="javax.jms.ConnectionFactory" />
 
-  <reference id="${mapseqPipelineName}PipelineBeanService" interface="edu.unc.mapseq.pipeline.PipelineBeanService"
-    component-name="${mapseqPipelineName}PipelineBeanService" />
+  <reference id="${mapseqWorkflowName}WorkflowBeanService" interface="edu.unc.mapseq.workflow.WorkflowBeanService"
+    component-name="${mapseqWorkflowName}WorkflowBeanService" />
 
-  <bean id="${mapseqPipelineName}PipelineMessageService" class="edu.unc.mapseq.messaging.${mapseqDotPackageName}.${mapseqPipelineName}PipelineMessageService"
+  <bean id="${mapseqWorkflowName}WorkflowMessageService" class="edu.unc.mapseq.messaging.${mapseqDotPackageName}.${mapseqWorkflowName}WorkflowMessageService"
     init-method="start" destroy-method="stop" activation="eager">
     <property name="connectionFactory" ref="connectionFactory" />
-    <property name="pipelineBeanService" ref="${mapseqPipelineName}PipelineBeanService" />
+    <property name="workflowBeanService" ref="${mapseqWorkflowName}WorkflowBeanService" />
     <property name="destinationName" value="queue/${mapseqDotPackageName}" />
   </bean>
 
