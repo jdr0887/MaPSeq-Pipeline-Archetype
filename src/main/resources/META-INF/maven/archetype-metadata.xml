@@ -6,7 +6,7 @@
     <requiredProperty key="mapseqTitle">
       <defaultValue>replace me</defaultValue>
     </requiredProperty>
-    <requiredProperty key="mapseqPipelineName">
+    <requiredProperty key="mapseqWorkflowName">
       <defaultValue>replace me</defaultValue>
     </requiredProperty>
     <requiredProperty key="mapseqGroupName">
