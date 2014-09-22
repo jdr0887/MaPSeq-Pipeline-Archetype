@@ -5,7 +5,7 @@
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" default-activation="lazy">
 
   <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.1.0">
-    <command name="${parentArtifactId}/run-pipeline">
+    <command>
       <action class="edu.unc.mapseq.commands.${mapseqDotPackageName}.${mapseqWorkflowName}RunWorkflowAction">
         <property name="maPSeqDAOBean" ref="maPSeqDAOBean" />
         <property name="maPSeqConfigurationService" ref="maPSeqConfigurationService" />
