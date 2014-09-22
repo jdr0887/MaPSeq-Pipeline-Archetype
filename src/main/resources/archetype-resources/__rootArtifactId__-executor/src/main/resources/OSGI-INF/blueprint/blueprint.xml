@@ -11,11 +11,11 @@
     </cm:default-properties>
   </cm:property-placeholder>
 
-  <reference id="${mapseqWorkflowName}WorkflowBeanService" interface="edu.unc.mapseq.pipeline.WorkflowBeanService"
+  <reference id="${mapseqWorkflowName}WorkflowBeanService" interface="edu.unc.mapseq.workflow.WorkflowBeanService"
     component-name="${mapseqWorkflowName}WorkflowBeanService" />
 
   <bean id="task" class="edu.unc.mapseq.executor.${mapseqDotPackageName}.${mapseqWorkflowName}WorkflowExecutorTask">
-    <property name="pipelineBeanService" ref="${mapseqWorkflowName}WorkflowBeanService" />
+    <property name="workflowBeanService" ref="${mapseqWorkflowName}WorkflowBeanService" />
   </bean>
 
   <bean id="${mapseqWorkflowName}WorkflowExecutorService" class="edu.unc.mapseq.executor.${mapseqDotPackageName}.${mapseqWorkflowName}WorkflowExecutorService"
