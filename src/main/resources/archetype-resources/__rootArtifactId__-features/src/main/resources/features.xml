@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-<features name="mapseq-pipeline-${parentArtifactId}-${symbol_dollar}{project.version}">
+<features name="mapseq-pipeline-${parentArtifactId}-${symbol_dollar}{project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0">
 
   <feature name="mapseq-pipeline-${parentArtifactId}" version="${symbol_dollar}{project.version}" resolver="(obr)">
     <bundle>mvn:edu.unc.mapseq.pipelines.${parentArtifactId}/${parentArtifactId}-workflow/${symbol_dollar}{project.version}</bundle>
